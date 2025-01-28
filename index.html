@@ -10,21 +10,18 @@
             margin: 0;
             height: 100vh;
             display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            justify-content: center;
+            align-items: flex-start; /* Cambiado de center a flex-start */
             background-color: #f4f4f9;
+            padding: 20px 0; /* Espaciado opcional desde arriba */
         }
 
         .popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -300%);
             background-color: white;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            width: 700px;
+            width: 900px;
             text-align: center;
             overflow-y: auto;
             max-height: 80vh;
