@@ -24,7 +24,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            width: 300px;
+            width: 700px;
             text-align: center;
         }
 
@@ -49,6 +49,7 @@
             background-color: #f9f9f9;
             border-radius: 6px;
             border: 1px solid #ddd;
+            text-align: left;
         }
 
         .hidden {
@@ -59,7 +60,12 @@
             max-width: 100%;
             height: auto;
             border-radius: 6px;
-            margin-top: 10px;
+            margin: 10px 0;
+        }
+
+        .content p {
+            margin: 10px 0;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -67,10 +73,10 @@
 
 <div class="popup">
     <h2>Inteligencia Artificial</h2>
-    <button onclick="showContent(1)">¿</button>
-    <button onclick="showContent(2)">Option 2</button>
-    <button onclick="showContent(3)">Option 3</button>
-    <button onclick="showContent(4)">Option 4</button>
+    <button onclick="showContent(1)">Definición</button>
+    <button onclick="showContent(2)">IA generativa</button>
+    <button onclick="showContent(3)">Modelos de entrenamiento</button>
+    <button onclick="showContent(4)">Tipos de inteligencia artificial</button>
     
     <div id="content" class="content hidden">
         <p id="content-text"></p>
@@ -86,33 +92,32 @@
 
         const data = {
             1: {
-                text: "La Inteligencia Artificial (IA) es una rama de la informática que se enfoca en el desarrollo de sistemas y algoritmos capaces de realizar tareas que, tradicionalmente, requieren inteligencia humana. Estas tareas incluyen el razonamiento, el aprendizaje, la toma de decisiones, la resolución de problemas, la percepción y el procesamiento del lenguaje natural. La IA utiliza técnicas como el aprendizaje automático, el procesamiento de datos, la lógica matemática y la estadística para crear modelos que pueden reconocer patrones, adaptarse a nuevas situaciones y mejorar su rendimiento con el tiempo, acercándose así a la capacidad cognitiva humana.
-La IA es un campo amplio que incluye muchas disciplinas, como la informática, el análisis y la estadística de datos, la ingeniería de hardware y software, la lingüística, la neurociencia y hasta la filosofía y la psicología. 
-
-A nivel operativo, la IA es un conjunto de tecnologías que se basan principalmente en el aprendizaje automático y el aprendizaje profundo, que se usan para el análisis de datos, la generación de predicciones y previsiones, la categorización de objetos, el procesamiento de lenguaje natural, las recomendaciones, la recuperación inteligente de datos y mucho más.
-
-La IA se está integrando cada vez más en nuestra vida diaria, a menudo pasando desapercibida, pero haciendo que las cosas sean más cómodas, atractivas y eficientes.",
-                image: "https://via.placeholder.com/300x150?text=Option+1+Image"
+                text: "<strong>Definición:</strong><br><br>La Inteligencia Artificial (IA) es una rama de la informática que se enfoca en el desarrollo de sistemas y algoritmos capaces de realizar tareas que, tradicionalmente, requieren inteligencia humana. Estas tareas incluyen el razonamiento, el aprendizaje, la toma de decisiones, la resolución de problemas, la percepción y el procesamiento del lenguaje natural.<br><br> La IA utiliza técnicas como el aprendizaje automático, el procesamiento de datos, la lógica matemática y la estadística para crear modelos que pueden reconocer patrones, adaptarse a nuevas situaciones y mejorar su rendimiento con el tiempo, acercándose así a la capacidad cognitiva humana. La IA es un campo amplio que incluye muchas disciplinas, como la informática, el análisis y la estadística de datos, la ingeniería de hardware y software, la lingüística, la neurociencia y hasta la filosofía y la psicología.<br><br> A nivel operativo, la IA es un conjunto de tecnologías que se basan principalmente en el aprendizaje automático y el aprendizaje profundo, que se usan para el análisis de datos, la generación de predicciones y previsiones, la categorización de objetos, el procesamiento de lenguaje natural, las recomendaciones, la recuperación inteligente de datos y mucho más. La IA se está integrando cada vez más en nuestra vida diaria, a menudo pasando desapercibida, pero haciendo que las cosas sean más cómodas, atractivas y eficientes.",
+                image: "https://mediatek-marketing.transforms.svdcdn.com/production/posts/MediaTek-IA-2023.jpg?w=2048&h=1075&q=80&auto=format&fit=crop&dm=1688130337&s=3b56535c28f441a34db9455d64444cb7"
             },
             2: {
-                text: "Option 2 selected! Here's the information for Option 2.",
-                image: "https://via.placeholder.com/300x150?text=Option+2+Image"
+                text: "<strong>IA generativa:</strong> <br><br>Es un tipo de IA que genera contenido nuevo, como texto, imágenes u otros medios. Aprenderá cómo se puede utilizar genAI para ayudar a las personas a realizar una variedad de tareas. Gemini y ChatGPT son ejemplos de herramientas genAI que se utilizan con indicaciones conversacionales; en otras palabras, le pide algo a la herramienta de IA y esta responde a su solicitud. ",
+                image: "https://mediatek-marketing.transforms.svdcdn.com/production/posts/MediaTek-IA-2023.jpg?w=2048&h=1075&q=80&auto=format&fit=crop&dm=1688130337&s=3b56535c28f441a34db9455d64444cb7"
             },
             3: {
-                text: "This is Option 3. Here is its corresponding information.",
-                image: "https://via.placeholder.com/300x150?text=Option+3+Image"
+                text: "<strong>Modelos:</strong> <br><br>1. El <i>aprendizaje supervisado</i> es un modelo de aprendizaje automático que asigna una entrada específica a un resultado mediante datos de entrenamiento etiquetados (datos estructurados). En términos simples, para entrenar un algoritmo que reconozca imágenes de gatos, se lo alimenta con imágenes etiquetadas como gatos.<br><br> 2. El <i>aprendizaje no supervisado</i> es un modelo de aprendizaje automático que aprende patrones en función de datos no etiquetados (datos no estructurados). A diferencia del aprendizaje supervisado, el resultado final no se conoce con anticipación. En cambio, el algoritmo aprende de los datos y los clasifica en grupos en función de diversos atributos. Por ejemplo, el aprendizaje no supervisado es bueno para identificar patrones y realizar modelado descriptivo.<br><br> 3. Además del aprendizaje supervisado y no supervisado, suele emplearse un enfoque mixto llamado <i>aprendizaje semisupervisado</i>, en el que solo se etiquetan algunos de los datos. En el aprendizaje semisupervisado, se conoce un resultado final, pero el algoritmo debe determinar cómo organizar y estructurar los datos para lograr los resultados deseados. ",
+                image: "https://mediatek-marketing.transforms.svdcdn.com/production/posts/MediaTek-IA-2023.jpg?w=2048&h=1075&q=80&auto=format&fit=crop&dm=1688130337&s=3b56535c28f441a34db9455d64444cb7"
             },
             4: {
-                text: "You've chosen Option 4. Here's what you need to know.",
-                image: "https://via.placeholder.com/300x150?text=Option+4+Image"
+                text: "<strong>Tipos:</strong> <br><br> El <i>aprendizaje automático</i>, o machine learning, se basa en la capacidad que un software o dispositivo tiene de aprender por su cuenta. El aprendizaje automático sigue tres pasos fundamentales: aprendizaje, entrenamiento y resultados. Puede estar supervisado por una persona o de manera autónoma gracias a la propia IA. <br><br>El <i>aprendizaje profundo</i>, o deep learning, es un tipo de aprendizaje que va más allá del automático, ya que engloba y procesa más datos e información al mismo tiempo. Utiliza otro de los tipos de inteligencia artificial para desenvolverse entre un mayor volumen de información, las redes neuronales, son una rama de la IA que imita la estructura y el funcionamiento del cerebro humano.<br><br> Las <i>redes neuronales</i>, como su propio nombre indica, son un tipo de IA que intenta imitar el comportamiento de las neuronas. A partir de una red de neuronas artificiales, se crea un sistema por el que reciben y procesan datos tal y como lo hace el procesamiento neuronal biológico. Las Redes Neuronales Artificiales (RNA) están formadas por millones de neuronas de este tipo que trabajan de manera coordinada y con la capacidad de operar con acciones de aprendizaje.<br><br> Los <i>sistemas expertos</i> son programas informáticos que emulan el razonamiento humano en áreas específicas. Estos sistemas están diseñados para imitar el conocimiento, la lógica racional y el juicio de un experto humano en un campo determinado. Con ello, es capaz de tomar decisiones informadas y proporcionar soluciones precisas y adecuadas en situaciones que pueden llegar a ser complejas.",
+                image: "https://mediatek-marketing.transforms.svdcdn.com/production/posts/MediaTek-IA-2023.jpg?w=2048&h=1075&q=80&auto=format&fit=crop&dm=1688130337&s=3b56535c28f441a34db9455d64444cb7"
             }
         };
 
         const selectedData = data[option] || { text: "", image: "" };
 
-        contentText.textContent = selectedData.text;
-        contentImage.src = selectedData.image;
-        contentImage.classList.remove('hidden');
+        contentText.innerHTML = selectedData.text;
+        if (selectedData.image) {
+            contentImage.src = selectedData.image;
+            contentImage.classList.remove('hidden');
+        } else {
+            contentImage.classList.add('hidden');
+        }
         contentDiv.classList.remove('hidden');
     }
 </script>
