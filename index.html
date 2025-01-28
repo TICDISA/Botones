@@ -54,6 +54,13 @@
         .hidden {
             display: none;
         }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +74,7 @@
     
     <div id="content" class="content hidden">
         <p id="content-text"></p>
+        <img id="content-image" class="hidden" alt="Content Image">
     </div>
 </div>
 
@@ -74,16 +82,35 @@
     function showContent(option) {
         const contentDiv = document.getElementById('content');
         const contentText = document.getElementById('content-text');
-        const messages = {
-            1: "You selected Option 1! Here's the information for Option 1.",
-            2: "Option 2 selected! Here's the information for Option 2.",
-            3: "This is Option 3. Here is its corresponding information.",
-            4: "You've chosen Option 4. Here's what you need to know."
+        const contentImage = document.getElementById('content-image');
+
+        const data = {
+            1: {
+                text: "You selected Option 1! Here's the information for Option 1.",
+                image: "https://via.placeholder.com/300x150?text=Option+1+Image"
+            },
+            2: {
+                text: "Option 2 selected! Here's the information for Option 2.",
+                image: "https://via.placeholder.com/300x150?text=Option+2+Image"
+            },
+            3: {
+                text: "This is Option 3. Here is its corresponding information.",
+                image: "https://via.placeholder.com/300x150?text=Option+3+Image"
+            },
+            4: {
+                text: "You've chosen Option 4. Here's what you need to know.",
+                image: "https://via.placeholder.com/300x150?text=Option+4+Image"
+            }
         };
 
-        contentText.textContent = messages[option] || "";
+        const selectedData = data[option] || { text: "", image: "" };
+
+        contentText.textContent = selectedData.text;
+        contentImage.src = selectedData.image;
+        contentImage.classList.remove('hidden');
         contentDiv.classList.remove('hidden');
     }
 </script>
 
 </body>
+</html>
